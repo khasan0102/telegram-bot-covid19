@@ -12,7 +12,7 @@ const Markup = require('telegraf/markup');
 const COUNTRIES_LIST = require('./help');
 
 bot = new Telegraf(process.env.BOT_TOKEN);
-bot.start((ctx) => ctx.reply(`Assalomu alaykum ${ctx.message.from.first_name} ${ctx.message.from.last_name}. Siz Covid-19 virusi bo'yicha dunyoning barcha mamlakatlari haqida malu'mot olishingiz mumkin😊😊. Lekin sizdan talab qilinadigan talab mamlakatlar nomalarini ingliztilida yozing.Shunda siz malumot olishingiz ancha osonroq bo'ladi. Hamma mamlakatlar ro'yhatini ko'rish uchun /help ni bosing!`, Markup.keyboard([
+bot.start((ctx) => ctx.reply(`Assalomu alaykum ${ctx.message.from.first_name}. Siz Covid-19 virusi bo'yicha dunyoning barcha mamlakatlari haqida malu'mot olishingiz mumkin😊😊. Lekin sizdan talab qilinadigan shartlar mamlakatlar nomalarini ingliztilida yozing.Shunda siz malu'mot olishingiz ancha osonroq bo'ladi. Hamma mamlakatlar ro'yhatini ko'rish uchun /help ni bosing!`, Markup.keyboard([
    ['Uzbekistan', 'US'],
    ['Russia', 'Saudi-Arabia'],
    ['Singapore', 'Kazakhstan']
@@ -21,7 +21,7 @@ bot.start((ctx) => ctx.reply(`Assalomu alaykum ${ctx.message.from.first_name} ${
    .extra()
 ));
 
-bot.command('/info', (ctx) => ctx.reply('Hello'));
+
 bot.help((ctx) => ctx.reply(COUNTRIES_LIST));
 bot.on('text', async (ctx) => {
    let data = {};
